@@ -11,3 +11,6 @@ height: 50vh;}
    color: #0d6efd;
    transform: scale(1.2);
 }
+
+/* EFEITOS MENU ATIVO */
+.active{border-bottom:1px solid #fff; transition: all 0.2s linear;}
