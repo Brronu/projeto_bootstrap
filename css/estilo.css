@@ -14,3 +14,8 @@ height: 50vh;}
 
 /* EFEITOS MENU ATIVO */
 .active{border-bottom:1px solid #fff; transition: all 0.2s linear;}
+
+/*PAGINA CADASTRO */
+.altura{
+   height: 300px; overflow-y:scroll;
+}
