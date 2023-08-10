@@ -23,7 +23,7 @@ idade.addEventListener("blur",function(){
     if(idade.value >=18){
         alert("Você possui mais de 18 anos ou mais!")
         //Essa função irá redirecionar o usuario para um link especifico
-        window.location.href= "https://onlyfans.com/"
+        //window.location.href= 
     }
     else{
         alert("Infelizmente você não e de maior ")
@@ -109,6 +109,67 @@ btnEscolaridade.addEventListener("click",(evento)=>{
     //console.log(evento)
     evento.preventDefault()// essa função irá impedir o comportamento padrão do botão
     
-    console.log(escolaridade[0],[1])
+    //console.log(escolaridade[0])
+    for(let itens of escolaridade){
+        //console.log(itens)
+        if(itens.checked){
+            alert(`Sua escolaridade e ${itens.value}`)// Isto e um template string, outra forma de conctenar.
+            //alert("Sua escolaridade e " +itens.value)
+            //confirm("Tem certeza?")
+
+        }
+    }
+
+})
+
+let escolha = document.querySelector("#escolha")
+let contrato = document.querySelector("#contrato")
+
+contrato.classList.add("d-none")
+
+escolha.addEventListener("change", ()=>{
+    if(escolha.checked){
+        contrato.classList.remove("d-none")
+        contrato.classList.add("d-block")
+    }
+    else{
+        contrato.classList.remove("d-block")
+        contrato.classList.add("d-none")
+    }
+})
+
+let concordo = document.querySelector("#concordo")
+
+concordo.addEventListener("click", ()=>{
+    if(concordo.checked){
+        alert("Parabens")
+    }
+    else{
+        alert("aceita fdp")
+        let mensagem = prompt("diga porque você desmarcou")// criar uma caixa de texto
+    }
+
+})
+
+let trabalho = document.querySelector(".form-select")
+
+trabalho.addEventListener("change", ()=>{
+    //console.log(trabalho.options)
+
+    for(let itens of trabalho){
+        if(itens.selected){
+        //console.log(itens.)
+        if(itens.value == "RH"){
+            trabalho.style.backgroundColor = "cyan"
+        }
+            if(itens.value == "Tecnologia"){
+            trabalho.style.backgroundColor = "black"
+        }
+        if(itens.value == "Financeiro"){
+            trabalho.style.backgroundColor = "red"
+        }
+        
+        }
+    }
 
 })
